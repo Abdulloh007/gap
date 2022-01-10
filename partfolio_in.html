@@ -270,7 +270,7 @@
             <div class="kh-row">
                 <div class="kh-dr_half-side kh-dfw kh-jc-space_between">
                     <div class="kh-dr_img">
-                        <img src="/assets/banners/catalog_in/draw_1st_float.png" alt="">
+                        <img id="lightbox" class="kh-pop_up-btn kh-light" src="/assets/banners/catalog_in/draw_1st_float.png" alt="">
                     </div>
                     <div class="kh-dr_content-wrap">
                         <h4>1-ЫЙ ЭТАЖ 136 M²</h4>
@@ -313,7 +313,7 @@
                 </div>
                 <div class="kh-dr_half-side kh-dfw kh-jc-space_between">
                     <div class="kh-dr_img">
-                        <img src="/assets/banners/catalog_in/draw_2nd_float.png" alt="">
+                        <img id="lightbox" class="kh-pop_up-btn kh-light" src="/assets/banners/catalog_in/draw_2nd_float.png" alt="">
                     </div>
                     <div class="kh-dr_content-wrap">
                         <h4>2-ОЙ ЭТАЖ 75 M²</h4>
@@ -636,6 +636,15 @@
         </div>
     </footer>
 
+    <section class="kh-popups">
+        <div data-target="lightbox" class="kh-pop_up kh-pop_light-box kh-dfw">
+            <i class="fa fa-close close kh-dfw"></i>
+            <div class="kh-light_controller">
+                <input type="range" step="1" value="0" max="100" min="0" >
+            </div>
+            <div class="kh-light-wrap"></div>
+        </div>
+    </section>
 
 
     <script src="../node_modules/swiper/swiper-bundle.js"></script>

@@ -170,10 +170,10 @@
                     <div class="swiper-container kh-header-slider">
                       <div class="swiper-wrapper">
                         <div class="kh-h_slide swiper-slide kh-dfw">
-                            <img src="/assets/sliders/catalog_in/h_slide_1.png" alt="">
+                            <img id="lightbox" class="kh-pop_up-btn kh-light" src="/assets/sliders/catalog_in/h_slide_1.png" alt="">
                         </div>
                         <div class="kh-h_slide swiper-slide kh-dfw">
-                            <img src="/assets/sliders/catalog_in/h_slide_2.png" alt="">
+                            <img id="lightbox" class="kh-pop_up-btn kh-light" src="/assets/sliders/catalog_in/h_slide_2.png" alt="">
                         </div>
                       </div>
                     </div>
@@ -211,7 +211,7 @@
             <div class="kh-row">
                 <div class="kh-dr_half-side kh-dfw kh-jc-space_between">
                     <div class="kh-dr_img">
-                        <img src="/assets/banners/catalog_in/draw_1st_float.png" alt="">
+                        <img id="lightbox" class="kh-pop_up-btn kh-light" src="/assets/banners/catalog_in/draw_1st_float.png" alt="">
                     </div>
                     <div class="kh-dr_content-wrap">
                         <h4>1-ЫЙ ЭТАЖ 136 M²</h4>
@@ -254,7 +254,7 @@
                 </div>
                 <div class="kh-dr_half-side kh-dfw kh-jc-space_between">
                     <div class="kh-dr_img">
-                        <img src="/assets/banners/catalog_in/draw_2nd_float.png" alt="">
+                        <img id="lightbox" class="kh-pop_up-btn kh-light" src="/assets/banners/catalog_in/draw_2nd_float.png" alt="">
                     </div>
                     <div class="kh-dr_content-wrap">
                         <h4>2-ОЙ ЭТАЖ 75 M²</h4>
@@ -1037,6 +1037,15 @@
         </div>
     </footer>
 
+    <section class="kh-popups">
+        <div data-target="lightbox" class="kh-pop_up kh-pop_light-box kh-dfw">
+            <i class="fa fa-close close kh-dfw"></i>
+            <div class="kh-light_controller">
+                <input type="range" step="1" value="0" max="100" min="0" >
+            </div>
+            <div class="kh-light-wrap"></div>
+        </div>
+    </section>
 
 
     <script src="../node_modules/swiper/swiper-bundle.js"></script>
@@ -1044,16 +1053,16 @@
     <script src="js/catalog_in.js"></script>
     <script type="text/javascript">
 
-    //Replacing Sections
-    const drawSection = document.querySelector('.kh-draw'),
-    partfolioSection = document.querySelector('.kh-parfolio'),
-    drawClone = drawSection.cloneNode(true),
-    partfolioClone = partfolioSection.cloneNode(true);
+        //Replacing Sections
+        const drawSection = document.querySelector('.kh-draw'),
+        partfolioSection = document.querySelector('.kh-parfolio'),
+        drawClone = drawSection.cloneNode(true),
+        partfolioClone = partfolioSection.cloneNode(true);
 
-    if (window.innerWidth <= 576) {
-        document.body.replaceChild( drawClone, partfolioSection);
-        document.body.replaceChild( partfolioClone, drawSection);
-    }
+        if (window.innerWidth <= 576) {
+            document.body.replaceChild( drawClone, partfolioSection);
+            document.body.replaceChild( partfolioClone, drawSection);
+        }
 
     </script>
 
